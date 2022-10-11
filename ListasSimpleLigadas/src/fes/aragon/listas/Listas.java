@@ -2,62 +2,62 @@ package fes.aragon.listas;
 
 public class Listas<T> {
 	public static void main(String[] args) {
-		ListaLADT<Integer> h = new ListaLADT<>();
+		ListaLADT<Integer> k = new ListaLADT<>();
 
 		System.out.println("Metodo estaVacio() [isEmpty]");
-		h.isEmpty();
+		k.isEmpty();
 
 		System.out.println("Metodo getLongitud() [getLength]");
-		h.getLength();
+		k.getLength();
 
 		System.out.println("Metodo agregarAlFinal() [addLast]");
-		h.addLast(5);
-		h.transversal();
+		k.addLast(5);
+		k.transversal();
 
 		System.out.println("Metodo agregarAlInicio() [addFirst]");
-		h.addFirst(8);
-		h.transversal();
+		k.addFirst(8);
+		k.transversal();
 
 		System.out.println("Metodo agregarDespuesDe() [addAt]");
-		h.addAt(5, 7);
-		h.transversal();
+		k.addAt(5, 7);
+		k.transversal();
 
-		h.addFirst(420);
-		h.addLast(69);
-		h.addLast(91);
-		h.addLast(1);
-		h.addLast(111);
-		h.addAt(1, 23);
+		k.addFirst(420);
+		k.addLast(69);
+		k.addLast(91);
+		k.addLast(1);
+		k.addLast(111);
+		k.addAt(1, 23);
 		System.out.println("Se agregan mas elementos a la lista");
-		h.transversal();
+		k.transversal();
 
 		System.out.println("Metodo eliminar() [Delete]");
-		h.delete(3);
-		h.transversal();
+		k.delete(3);
+		k.transversal();
 
 		System.out.println("Metodo eliminarElFinal() [DeleteLast]");
-		h.deleteLast();
-		h.transversal();
+		k.deleteLast();
+		k.transversal();
 
 		System.out.println("Metodo eliminarElPrimero() [DeleteFirst]");
-		h.deleteFirst();
-		h.transversal();
+		k.deleteFirst();
+		k.transversal();
 
 		System.out.println("Metodo buscar()");
-		h.search(69);
+		k.search(69);
 
 		System.out.println("Metodo actualizar()");
-		h.actualizar(5, 0);
-		h.transversal();
+		k.actualizar(5, 0);
+		k.transversal();
 
 		System.out.println("Metodo getTamanio()");
-		h.getLength();
+		k.getLength();
 
 		System.out.println("Metodo transversal()");
-		h.transversal();
+		k.transversal();
 
 		System.out.println("Metodo estaVacia()");
-		h.isEmpty();
+		k.isEmpty();
 
 	}
 
