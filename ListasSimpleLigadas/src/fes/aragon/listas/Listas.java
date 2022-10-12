@@ -2,62 +2,47 @@ package fes.aragon.listas;
 
 public class Listas<T> {
 	public static void main(String[] args) {
-		ListaLADT<Integer> k = new ListaLADT<>();
-
-		System.out.println("Metodo estaVacio() [isEmpty]");
-		k.isEmpty();
-
-		System.out.println("Metodo getLongitud() [getLength]");
-		k.getLength();
-
-		System.out.println("Metodo agregarAlFinal() [addLast]");
-		k.addLast(5);
-		k.transversal();
-
-		System.out.println("Metodo agregarAlInicio() [addFirst]");
-		k.addFirst(8);
-		k.transversal();
-
-		System.out.println("Metodo agregarDespuesDe() [addAt]");
-		k.addAt(5, 7);
-		k.transversal();
-
-		k.addFirst(420);
-		k.addLast(69);
-		k.addLast(91);
-		k.addLast(1);
-		k.addLast(111);
-		k.addAt(1, 23);
-		System.out.println("Se agregan mas elementos a la lista");
-		k.transversal();
-
-		System.out.println("Metodo eliminar() [Delete]");
-		k.delete(3);
-		k.transversal();
-
-		System.out.println("Metodo eliminarElFinal() [DeleteLast]");
-		k.deleteLast();
-		k.transversal();
-
-		System.out.println("Metodo eliminarElPrimero() [DeleteFirst]");
-		k.deleteFirst();
-		k.transversal();
-
-		System.out.println("Metodo buscar()");
-		k.search(69);
-
-		System.out.println("Metodo actualizar()");
-		k.actualizar(5, 0);
-		k.transversal();
-
-		System.out.println("Metodo getTamanio()");
-		k.getLength();
-
-		System.out.println("Metodo transversal()");
-		k.transversal();
-
-		System.out.println("Metodo estaVacia()");
-		k.isEmpty();
+		ListaLADT<Integer> holachao = new ListaLADT<>();
+		System.out.println("Mostrando el metodo estaVacio [isEmpty]");
+		holachao.isEmpty();
+		System.out.println("Mostrando el metodo agregarAlInicio [addFirst]");
+		holachao.addFirst(8);
+		holachao.mostrarVert();
+		System.out.println("Mostrando el metodo estaVacio [isEmpty]");
+		holachao.isEmpty();
+		System.out.println("Mostrando el metodo agregarAlFinal [addLast]");
+		holachao.addLast(5);
+		holachao.mostrarVert();
+		System.out.println("Mostrando el metodo agregarDespuesDe [addAt]");
+		holachao.addAt(5, 7);
+		holachao.mostrarVert();
+		System.out.println("Lista despues de agregar algunos elementos");
+		holachao.addFirst(420);
+		holachao.addLast(91);
+		holachao.addLast(1);
+		holachao.addFirst(666);
+		holachao.addFirst(46);
+		holachao.addAt(1, 23);
+		holachao.mostrarVert();
+		System.out.println("Mostrando el metodo eliminarElFinal [DeleteLast]");
+		holachao.deleteLast();
+		holachao.mostrarVert();
+		System.out.println("Mostrando el metodo eliminarElPrimero [DeleteFirst]");
+		holachao.deleteFirst();
+		holachao.mostrarVert();
+		System.out.println("Mostrando el metodo eliminar [Delete]");
+		holachao.delete(3);
+		System.out.println("Mostrando el metodo actualizar");
+		holachao.actualizar(5, 0);
+		holachao.mostrarVert();
+		System.out.println("Mostrando el metodo buscar");
+		holachao.search(69);
+		System.out.println("Mostrando el metodo para mostrarlo en vertical");
+		holachao.mostrarVert();
+		System.out.println("Mostrando el metodo estaVacia");
+		holachao.isEmpty();
+		System.out.println("Mostrando el metodo getLongitud [getLength]");
+		holachao.getLength();
 
 	}
 
