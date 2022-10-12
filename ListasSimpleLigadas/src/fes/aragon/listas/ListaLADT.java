@@ -128,7 +128,7 @@ public class ListaLADT<T> {
 		}
 	}
 
-	public void transversal() {
+	public void mostrarVert() {
 		Nodo<T> aux = this.head;
 		while (aux != null) {
 			System.out.print(aux);
