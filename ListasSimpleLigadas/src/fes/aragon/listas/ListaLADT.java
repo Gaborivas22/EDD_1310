@@ -7,19 +7,19 @@ public class ListaLADT<T> {
 	public ListaLADT() {
 	}
 
-	// Esta vacio?
+
 	public boolean isEmpty() {
 		System.out.println(this.head == null);
 		return this.head == null;
 	}
 
-	// tamanio
+
 	public int getLength() {
 		System.out.println("El tama\u00f1o de la lista es: " + this.tamanio);
 		return this.tamanio;
 	}
 
-	// agregar al final
+
 	public void addLast(T valor) {
 		if (this.head == null) {
 			head = new Nodo<>(valor);
@@ -33,7 +33,7 @@ public class ListaLADT<T> {
 			tamanio++;
 		}
 	}
-	//agregar al inicio
+
 	public void addFirst(T valor) {
 		if (this.head == null) {
 			head = new Nodo<>(valor);
@@ -44,10 +44,10 @@ public class ListaLADT<T> {
 			tamanio++;
 		}
 	}
-	//Agregar despues de
+
 	public void addAt(T referencia, T valor) {
 		if (this.head == null) {
-			System.out.println("La lista está vacía, se agregará el valor como único elemento.");
+			System.out.println("La lista se encuentra vacia");
 			head = new Nodo<>(valor);
 		} else {
 			Nodo<T> nuevo = new Nodo(valor);
@@ -64,11 +64,11 @@ public class ListaLADT<T> {
 			tamanio++;
 		}
 	}
-	//borrar
+
 	public void delete(int posicion) {
 		int posi = 0;
 		if (head == null) {
-			System.out.println("La lista está vacía, ingrese elementos a la lista para probar este método");
+			System.out.println("La lista se encuentra vacia, no es posible borrar un elemento");
 		} else {
 			Nodo<T> aux_anterior = this.head;
 			Nodo<T> aux = this.head.getNext();
@@ -82,7 +82,7 @@ public class ListaLADT<T> {
 			tamanio--;
 		}
 	}
-	//borrar al principio
+
 	public void deleteFirst() {
 		Nodo<T> aux = this.head;
 		aux.setDato(head.getNext().getDato());
@@ -100,7 +100,7 @@ public class ListaLADT<T> {
 		aux.setNext(null);
 		tamanio--;
 	}
-	//buscar
+
 	public void search(T valor) {
 		Nodo<T> aux = this.head;
 		int indice = 0;
@@ -109,12 +109,12 @@ public class ListaLADT<T> {
 				aux = aux.getNext();
 				indice++;
 			}
-			System.out.println("El dato '" + aux.getDato() + "' se encuentra en la posición: " + indice);
+			System.out.println("El dato '" + aux.getDato() + "' se encuentra en la posicion: " + indice);
 		} catch (Exception e) {
-			System.out.println("El dato '" + valor + "' no se encuentra en la lista, pruebe con otro dato.");
+			System.out.println("El dato " + valor + "no ha sido localizado en la lista");
 		}
 	}
-	//actualizar
+
 	public void actualizar(T a_buscar, T valor) {
 		Nodo<T> aux = this.head;
 		try {
@@ -124,10 +124,10 @@ public class ListaLADT<T> {
 			aux.setDato(valor);
 		} catch (Exception e) {
 			System.out.println(
-					"El dato '" + a_buscar + "' no se encuentra en la lista, por lo tanto no es posible cambiarlo.");
+					"El dato " + a_buscar + " no ha sido localizado en la lista");
 		}
 	}
-	//mostrar de forma transversal
+
 	public void transversal() {
 		Nodo<T> aux = this.head;
 		while (aux != null) {
